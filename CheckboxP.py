@@ -1,13 +1,21 @@
+ 
 from tkinter import *
 
 window = Tk()
 
 window.geometry("500x500")
 
+# this function determines whether or not the inputs are valid or not and prints a
+#response accordingly
+# the otherBools variable checks to see if more than one box is checked by adding the
+#boolian variables together (True = 1 False = 0
 def yoAnsa():
     otherBools = CheckVar1.get() + CheckVar2.get() + CheckVar3.get() + CheckVar4.get()
- #   print(otherBools)
+# the otherBools variable checks to see if more than one box is checked by adding the
+#boolian variables together (True = 1 False = 0
     if otherBools == 1:
+# take the number from the otherBools variable and sees if it is true and if it is it
+# prints the corresponding statment
         if CheckVar1.get() == True:
             print("We know he is a fruit.")
         elif CheckVar2.get() == True:
@@ -23,18 +31,20 @@ def yoAnsa():
 
 label = Label(window, text="Choose one that you think is true!!!!!!!!")
 
+#checks to see if the boxes are checked and sets it to a variable
 CheckVar1 = IntVar()
 CheckVar2 = IntVar()
 CheckVar3 = IntVar()      
 CheckVar4 = IntVar()
 
+#checkbutton widgets that show up in the tab with the diffrent labels on them
 C1 = Checkbutton(window, text = "Caleb is an orange", variable = CheckVar1, \
                  onvalue = 1, offvalue = 0, height=5, \
                  width = 20)
-C2 = Checkbutton(window, text = "Zack is Flash", variable = CheckVar2, \
+C2 = Checkbutton(window, text = "Zack is the Flash", variable = CheckVar2, \
                  onvalue = 1, offvalue = 0, height=5, \
                  width = 20)
-C3 = Checkbutton(window, text = "Derek is noob", variable = CheckVar3, \
+C3 = Checkbutton(window, text = "Derek is a noob", variable = CheckVar3, \
                  onvalue = 1, offvalue = 0, height=5, \
                  width = 20)
 C4 = Checkbutton(window, text = "Brandune it dume", variable = CheckVar4, \
